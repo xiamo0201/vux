@@ -1,0 +1,5 @@
+
+<div>
+  <img class="previewer-demo-img" v-for="(item, index) in list" :src="item.src" width="100" @click="show(index)">
+  <previewer :list="list" ref="previewer" :options="options"></previewer>
+</div>

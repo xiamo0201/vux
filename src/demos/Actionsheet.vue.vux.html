@@ -1,0 +1,22 @@
+
+<div>
+  <group>
+    <x-switch :title="$t('Basic Usage')" v-model="show1"></x-switch>
+    <x-switch :title="$t('Show cancel menu')" v-model="show2"></x-switch>
+    <x-switch :title="$t('menu as tips')" v-model="show3"></x-switch>
+  </group>
+
+  <group :title="$t('prevent closing when clicking mask')">
+    <x-switch :title="$t('Basic Usage')" v-model="show4"></x-switch>
+  </group>
+
+  <actionsheet v-model="show4" :menus="menus1" :close-on-clicking-mask="false" show-cancel></actionsheet>
+
+  <actionsheet v-model="show1" :menus="menus1" @on-click-menu="click"></actionsheet>
+
+  <actionsheet v-model="show2" :menus="menus2" @on-click-menu="click" show-cancel></actionsheet>
+
+  <actionsheet v-model="show3" :menus="menus3" @on-click-menu="click" @on-click-menu-delete="onDelete" show-cancel></actionsheet>
+  
+  <toast v-model="showSuccess">{{$t('Deleted~') }}</toast>
+</div>

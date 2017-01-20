@@ -1,0 +1,26 @@
+
+<div>
+  <group>
+    <x-switch :title="$t('Basic Usage')" v-model="show1"></x-switch>
+    <x-switch :title="$t('type:text')" v-model="show2"></x-switch>
+    <x-switch :title="$t('type:cancel')" v-model="show3"></x-switch>
+    <x-switch :title="$t('type:warn')" v-model="show4"></x-switch>
+    <x-switch :title="$t('time:1s')" v-model="show5"></x-switch>
+    <x-switch :title="$t('long text')" v-model="show6"></x-switch>
+  </group>
+  <toast v-model="show1" @on-hide="onHide">{{ $t('Basic Usage') }}</toast>
+  <toast v-model="show2" type="text">{{$t('success')}}</toast>
+  <toast v-model="show3" type="cancel">{{$t('type:cancel')}}</toast>
+  <toast v-model="show4" type="warn">{{$t('type:warn')}}</toast>
+  <toast v-model="show5" :time="1000">{{$t('time:1s')}}</toast>
+  <toast v-model="show6" type="text" width="20em">{{$t('show me code')}}</toast>
+  <group :title="$t('prop:text')">
+    <x-switch :title="$t('type:success')" v-model="show7"></x-switch>
+    <x-switch :title="$t('type:text')" v-model="show8"></x-switch>
+  </group>
+  <toast v-model="show7" text="Hello World"></toast>
+  <toast v-model="show8" type="text" text="Hello World"></toast>
+  <group :title="$t('As a plugin(>=v0.1.3)')">
+    <x-switch :title="$t('default')" v-model="show9" @on-change="onChange"></x-switch>
+  </group>
+</div>

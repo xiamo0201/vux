@@ -1,0 +1,14 @@
+
+<div>
+  <group :title="$t('Basic Usage')">
+    <x-switch :title="$t('default false')"></x-switch>
+    <x-switch :title="$t('default true')" :inline-desc="value1 + ''" v-model="value1"></x-switch>
+  </group>
+  <group :title="$t('disabled')">
+    <x-switch :title="$t('default false')" disabled></x-switch>
+    <x-switch :title="$t('default true')" :value="true" disabled></x-switch>
+  </group>
+  <group :title="$t('html title')">
+    <x-switch disabled :title="$t('switch red')"></x-switch>
+  </group>
+</div>

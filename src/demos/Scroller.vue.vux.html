@@ -1,0 +1,40 @@
+
+<div>
+  <divider>{{ $t('A Horizontal Scroller without Scrollbar') }}</divider>
+  <scroller lock-y :scrollbar-x=false>
+    <div class="box1">
+      <div class="box1-item" v-for="i in 7"><span>{{' ' + i + ' '}}</span></div>
+    </div>
+  </scroller>
+
+  <divider>{{ $t('A Horizontal Scroller with Scrollbar') }}</divider>
+  <scroller lock-y scrollbar-x>
+    <div class="box1">
+      <div class="box1-item" v-for="i in 7"><span>{{' ' + i + ' '}}</span></div>
+    </div>
+  </scroller>
+
+  <divider>{{ $t('A Horizontal Scroller without bounce effect') }}</divider>
+  <scroller lock-y scrollbar-x :bounce=false>
+    <div class="box1">
+      <div class="box1-item" v-for="i in 7"><span>{{' ' + i + ' '}}</span></div>
+    </div>
+  </scroller>
+
+  <divider>{{ $t('A Vertical Scroller') }}</divider>
+  <scroller lock-x height="200px">
+    <div class="box2">
+      <p v-for="i in 80">placeholder {{i}}</p>
+    </div>
+  </scroller>
+
+  <divider>{{ $t('A Vertical Scroller with scrollbar') }}</divider>
+  <scroller lock-x scrollbar-y height="200px" ref="scroller">
+    <div class="box2">
+      <p v-for="i in 20" v-if="showList1">placeholder {{ i + '' + i }}</p>
+      <p v-for="i in 10" v-if="!showList1">placeholder {{ i }}</p>
+      <x-button style="margin:10px 0;" type="primary" @click.native="onClickButton">{{ $t('Button') }}</x-button>
+    </div>
+  </scroller>
+  <x-button @click.native="changeList" type="primary">{{ $t('show another list') }}</x-button>
+</div>

@@ -1,0 +1,32 @@
+
+<div>
+  <group :title="$t('Default')">
+    <x-number :name="$t('Quantity')" :title="$t('Quantity')"></x-number>
+  </group>
+
+  <group :title="$t('listen')">
+    <x-number :title="$t('Quantity')" :value="0" :min="0" @on-change="change"></x-number>
+  </group>
+
+  <group :title="$t('set width=100px')">
+    <x-number :title="$t('Quantity')" width="100px"></x-number>
+  </group>
+
+  <group :title="$t('set step=0.5')">
+    <x-number :title="$t('Quantity')" :step="0.5"></x-number>
+  </group>
+
+  <group :title="$t('set value=1, min=-5 and max=8')">
+    <x-number :title="$t('Quantity')" :min="-5" :max="8" :value="1"></x-number>
+  </group>
+
+  <group :title="$t('fillable = false')">
+    <x-number :value="10" :title="$t('Quantity')" :fillable="false"></x-number>
+  </group>
+  
+  <group :title="$t('use with other group elements')">
+    <x-number :title="$t('Quantity')" :min="-5" :max="8" :value="1" type="inline"></x-number>
+    <x-number :title="$t('Quantity')" :min="-5" :max="8" :value="1" type="inline"></x-number>
+    <x-switch :title="$t('Switch Component')" :value.sync="true"></x-switch>
+  </group>
+</div>

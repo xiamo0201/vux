@@ -1,0 +1,12 @@
+
+<div style="text-align:center;margin-top:15px;">
+  <divider>{{ $t('Notice: It cannot be extracted by Wechat') }}</divider>
+  <qrcode value="https://vux.li"></qrcode>
+  <br>
+  <br>
+  <qrcode :value="value" :fg-color="fgColor"></qrcode>
+  <br>
+  <span>{{ $t('current url') }}: {{value}}</span>
+  <br>
+  <span>{{ $t('current fgColor') }}: {{fgColor}}</span>
+</div>

@@ -1,0 +1,7 @@
+
+<div>
+  <div v-for="src in list" style="background-color:yellow;text-align:center;">
+    <span style="font-size:20px;">Loading</span>
+    <x-img :src="src" @on-success="success" @on-error="error" class="ximg-demo" error-class="ximg-error" :offset="-100"></x-img>
+  </div>
+</div>
