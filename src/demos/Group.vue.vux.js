@@ -11,7 +11,12 @@
 </template>
 
 <script>
-import { Group, Cell, XInput, Selector, PopupPicker } from 'vux'
+import Group from '../components/group/index.vue'
+import Cell from '../components/cell/index.vue'
+import XInput from '../components/x-input/index.vue'
+import Selector from '../components/selector/index.vue'
+import PopupPicker from '../components/popup-picker/index.vue'
+
 
 export default {
   components: {

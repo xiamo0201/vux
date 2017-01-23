@@ -8,7 +8,7 @@
           <input type="search" class="weui_search_input" id="search_input" :placeholder="placeholder" autocomplete="off" :required="required" v-model="currentValue" ref="input"
           @focus="isFocus = true"
           @blur="isFocus = false"/>
-          <a href="javascript:" class="weui_icon_clear" id="search_clear" @click="clear"></a>
+          <a href="javascript:" class="weui_icon_clear" id="search_clear" v-show="currentValue" @click="clear"></a>
         </div>
         <label for="search_input" class="weui_search_text" id="search_text" v-show="!isFocus && !value">
           <i class="weui_icon_search"></i>
