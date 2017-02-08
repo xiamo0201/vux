@@ -6,6 +6,7 @@
       <x-input title="隐患部位" placeholder="必填" v-model="value3"></x-input>
       <x-input title="密码" type="password" placeholder="必填" v-model="value4"></x-input>
       <popup-picker title="请选择" :data="list" v-model="value5" value-text-align="left"></popup-picker>
+      <qiu></qiu>
     </group>
   </div>
 </template>
@@ -16,6 +17,7 @@ import Cell from '../components/cell/index.vue'
 import XInput from '../components/x-input/index.vue'
 import Selector from '../components/selector/index.vue'
 import PopupPicker from '../components/popup-picker/index.vue'
+import Qiu from '../components/qiu/index.vue'
 
 
 export default {
@@ -24,7 +26,8 @@ export default {
     Cell,
     XInput,
     Selector,
-    PopupPicker
+    PopupPicker,
+    Qiu
   },
   data () {
     return {

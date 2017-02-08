@@ -61,6 +61,7 @@ import ViewBox from './view-box'
 import Popover from './popover'
 import LoadMore from './load-more'
 import FormPreview from './form-preview'
+import Qiu from './qiu'
 
 import { ButtonTab, ButtonTabItem } from './button-tab'
 import { Checker, CheckerItem } from './checker'
@@ -147,7 +148,8 @@ const vux = {
   ViewBox,
   Popover,
   LoadMore,
-  FormPreview
+  FormPreview,
+  Qiu
 }
 
 module.exports = vux

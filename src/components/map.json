@@ -95,5 +95,6 @@
   "XNumber": "src/components/x-number/index.vue",
   "XProgress": "src/components/x-progress/index.vue",
   "XSwitch": "src/components/x-switch/index.vue",
-  "XTextarea": "src/components/x-textarea/index.vue"
+  "XTextarea": "src/components/x-textarea/index.vue",
+  "Qiu": "src/components/qiu/index.vue"
 }
